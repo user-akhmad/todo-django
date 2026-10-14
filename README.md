@@ -21,6 +21,9 @@
 
 1. Клонировать репозиторий:
    ```bash
-   git clone https://github.com/ВАШ-ЛОГИН/todo-django.git
+   git clone https://github.com/user-akhmad/todo-django.git
    cd todo-django
    ```
+
+##Автор
+Akhmad- Python- разрабочик
