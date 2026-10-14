@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>About me</title>
+  </head>
+  <body>
+    <h1>привет,{{username }}!</h1>
+    <p>My purposes:</p>
+    <ul>
+      {%for goal in goals %}
+      <li>{{goal}}</li>
+      {% endfor %}
+    </ul>
+
+    {% if goals|length > 3 %}
+    <p>У меня много целей!</p>
+    {%else%}
+    <p>целей пока мало, но я только учусь</p>
+    {% endif %}
+    <img
+      src="https://i.pinimg.com/474x/4c/3d/1c/4c3d1c02b5139d154250b203d16fa2b2.jpg"
+      alt="Random photo"
+    />
+  </body>
+</html>

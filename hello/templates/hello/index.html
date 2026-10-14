@@ -1,0 +1,12 @@
+<!doctype html>
+<head>
+  <title>Главная страница</title>
+</head>
+<body>
+  <h1>Mои любимые фильмы</h1>
+  <ul>
+    {% for film in movies%}
+    <li>{{film}}</li>
+    {% endfor %}
+  </ul>
+</body>
