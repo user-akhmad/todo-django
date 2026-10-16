@@ -25,5 +25,6 @@
    cd todo-django
    ```
 
-##Автор
-Akhmad- Python- разрабочик
+## Автор
+
+**Akhmad** - Python-разрабочик
