@@ -17,6 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from hello import views
+from rest_framework.routers import DefaultRouter
+from hello.views import TaskViewSet
+
+router = DefaultRouter()
+router.register(r'api/tasks', TaskViewSet, basename= 'tasks')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +32,8 @@ urlpatterns = [
     path('tasks/active/', views.active, name='active'),
     path('tasks/<int:task_id>/delete', views.task_delete, name='task_delete'),
     path('tasks/<int:task_id>/done/', views.task_done, name='task_done'),
-    path('api/tasks/', views.api_task_list, name='api_task_list'),
+    # path('api/tasks/', views.api_task_list, name='api_task_list'),
+    # path('api/tasks/<int:task_id>/', views.TaskDetailAPIView.as_view(), name='api_task_detail')
 ]
+
+urlpatterns += router.urls
